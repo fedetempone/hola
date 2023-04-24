@@ -1,0 +1,178 @@
+/*ESTILOS GENERALES*/
+*{
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+body{
+    font-family: 'harry_pregular', fantasy;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+
+/*ESTILOS PARA LAS PARTICULAS*/
+
+#particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*ESTILOS PARA LA BARRA DE NAVEGACION*/
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    font-size: 1.7rem;
+}
+
+.hpLogo{
+    height: 100px;
+    width: 260px;
+}
+
+
+.topHeader{  
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.openMenu{
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 15px;
+    filter: invert(99%) sepia(2%) saturate(43%) hue-rotate(218deg) brightness(116%) contrast(100%);
+}
+
+.closeMenu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 42px 27px;
+}
+
+
+#slider {
+    border-radius: 4rem;
+    top: 1rem;
+}
+
+.heroBanner {
+    opacity: 0.6;
+}
+
+/*MEDIA QUERY*/
+
+@media (max-width: 800px){
+
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: #606031;
+        height: 100%;
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .menuOpened{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .menu a{
+        line-height: 60px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width:799px){
+    #slider{
+        top: 6rem;
+    }
+
+    .nivo-controlNav{
+        padding-top: 8rem !important;
+    }
+}
+ 
+
+@media (min-width: 800px){
+    .openMenu , .closeMenu{
+        display: none;
+    }
+    
+    .hpLogo:hover{
+        filter: invert(77%) sepia(69%) saturate(646%) hue-rotate(4deg) brightness(198%) contrast(101%);;
+    }
+    
+    .navBar a:hover{
+        /* color: #fdaf4b; */
+        filter: invert(77%) sepia(69%) saturate(646%) hue-rotate(4deg) brightness(226%) contrast(101%);;
+    }
+
+    #slider{
+        top: 13rem;
+        border-radius: 0px;
+    }
+
+    .nivo-controlNav{
+        padding-top: 15rem !important;
+    }
+
+    .heroBanner{
+        width: 100%;
+    }
+
+}    
+  
+
+@media (max-width: 400px){
+    .navBar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #slider{
+        top: 2rem;
+    }
+}
+    
+    
